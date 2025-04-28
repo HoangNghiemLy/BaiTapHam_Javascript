@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Hóa Đơn Cáp</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Tính Hóa Đơn Cáp</h1>
+
+        <div class="mb-4">
+            <label class="block font-medium mb-1">Mã khách hàng:</label>
+            <input id="maKhachHang" type="text" class="w-full p-2 border rounded" placeholder="Nhập mã khách hàng">
+        </div>
+
+        <div class="mb-4">
+            <label class="block font-medium mb-1">Loại khách hàng:</label>
+            <select id="loaiKhachHang" onchange="handleCustomerTypeChange()" class="w-full p-2 border rounded">
+                <option value="">-- Chọn loại khách hàng --</option>
+                <option value="Nhà dân">Nhà dân</option>
+                <option value="Doanh nghiệp">Doanh nghiệp</option>
+            </select>
+        </div>
+
+        <div id="soKetNoiGroup" class="mb-4" style="display: none;">
+            <label class="block font-medium mb-1">Số kết nối:</label>
+            <input id="soKetNoi" type="number" class="w-full p-2 border rounded"
+                placeholder="Nhập số kết nối (chỉ cho DN)">
+        </div>
+
+        <div class="mb-4">
+            <label class="block font-medium mb-1">Số kênh cao cấp:</label>
+            <input id="soKenhCaoCap" type="number" class="w-full p-2 border rounded" placeholder="Nhập số kênh cao cấp">
+        </div>
+
+        <button onclick="tinhHoaDon()" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+            Tính Hóa Đơn
+        </button>
+
+        <div id="ketQua"></div>
+        <a href="../index.html" style="font-weight: bold;">
+            < Way back home</a>
+                <script src="../JS/bai4.js"></script>
+    </div>
+</body>
+
+</html>
